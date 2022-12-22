@@ -1,0 +1,155 @@
+/* ANDRIANIRAISANTSOA, BIBAL et RACERLYN */
+body {   /* Style appliqué au corps de la page */
+	font-family: 'Source code pro', Calibri , serif; /* Police : calibri(source code pro) */
+	margin: 0px;    /* Marge : 0 */
+	padding: 0px;  /* Ecart de remplissage entre les éléments : 0 */
+}
+
+nav {  /* Style appliqué à la barre de navigation */
+	width: 100%;  /* Elle occupe toute la place qui lui est attribuée */
+	background-color: #FA8072; /* Couleur de fond : #FA8072 */
+	align-items: center; /* Alignement des élément dans nav au centre */
+	
+}
+
+nav ul {
+	margin:0px;
+	padding:0px;
+	overflow:hidden; /* Le dépassement du contenu du bloc est caché */
+}
+
+nav li { /* Style appliqué aux listes dans nav */
+	list-style-type: none; /* Style de la liste : aucun */ 
+	float: right; /* L'élément doit être placé à droite de son conteneur */ 
+}
+
+nav a { /* Style appliqué aux liens dans nav */
+	display : inline-block; /* Alignement des éléments horizentalement */ 
+	text-decoration: none; /* Suppression des traits de soulignement automatique sous les liens */
+	padding: 20px 30px; /* Espacement entre les liens */
+	color: #FFF ; /* Couleur blanche */
+	font-weight: bold; /* Texte en gras */ 
+}
+
+nav img { /* Style appliqué aux images dans nav */
+	width: 60px; /* Taille de l'image */
+}
+
+.menu-muse1:hover { /* Style lorsqu'on survole le menu présentation */
+	border-top: 5px solid #f1dc4f; /* Bordure en haut de 5px, solid et de couleur #f1dc4f */
+	background-color:RGBa (241 , 211, 79, 0.15 ); /* Couleur de fond lors du survole en semi transparence */
+}
+
+.menu-muse2:hover { /* Style lorsqu'on survole le menu réservation */
+	border-top: 5px solid #0070bb; /* Bordure en haut de 5px, solid et de couleur #0070bb */
+	background-color:RGBa (000 , 112, 192, 0.15 ); /* Couleur de fond lors du survole en semi transparence */
+}
+
+nav li:hover a { /* Style des éléments a lors du survole des éléments li */
+	padding: 15px 30px 20px 30px; /* Réduction du padding par rapport au survole qui crée un border-top de 5px */
+}
+	
+table { /* Style appliqué aux tableaux */
+	border: 0; /* Aucune bordure */
+	width: 90%; /* Ils occupent 90% de la page */
+	text-align: center; /* Alignement de tous les textes du tableau au centre */
+	margin: auto; /* Marge adaptée automatiquement */
+}
+
+.bienvenue { /* Style associé à la classe bienvenue */
+	font-family: Apple Chancery, cursive; /* Police : cursive */
+	font-weight: 500; /* Texte en gras */
+	font-size: 80px; /* Taille de la police : 80px */
+}
+
+#logo { /* Style associé à l'id logo */
+	float: left; /* Place l'élément à gauche */	
+}
+
+#logo1 { /* Style associé à l'id logo1 */
+	width: 90px;
+}
+
+table td { /* Style appliqué aux cellules dans les tables */
+	vertical-align : middle; /* Alignement des éléments de chaque cellule au milieu */
+	font-size: 50px;
+}
+
+div { /* Style appliqué à l'élément div */
+	width: 100%;
+	background-color: #FA8072	 ;
+}
+
+div img { /* Style appilqué à l'image dans le div */
+	width: 30px; /* Taille : 30px */
+}
+
+div td { /* Style appliqué aux cellules dans le div */
+	font-size: 20px; /* Taille de la police : 20px */
+}
+
+#Titre { /* Style associé à l'id titre */
+	font-size: 40px;
+	font-family:Stencil Std, fantasy ; /* Police : fantasy */
+	color: white;
+}
+
+fieldset { /* Style appliqué au fieldset */
+	margin-top: 70px;
+	width: 59%;
+	background-color: #FA8072;
+	box-shadow: 5px 5px 20px 1px 10px rgb(85, 85, 85);
+	border: 0px;
+	padding-left: 10px;
+	border-radius: 10px 10px 10px 10px;
+	color: white;
+	height: 1160px;
+}
+
+#submit, #reset { /* Style appliqué sur cahque bouton */
+	margin: 20px 35px;
+	color: black;
+	background-color: white;
+	width: 30%;
+	font-size: 17px;
+	border-radius: 20px; /* Coins arrondis pour chaque bouton */
+	border: 1px solid white;
+}
+
+#submit:hover, #reset:hover { /* Style lorsqu'on survole les boutons réserver et annuler */
+	color: white;
+	background-color: #E9967A;
+}
+
+input { /* Style appliqué sur chaque input */
+	font-size: 16px;
+	border: none;
+	outline: none;
+	background: none;
+	border-bottom:1px solid white; /* Bordure en bas de 1px et de couleur blanche */
+	color: white;
+	width: 100%;
+}
+
+label { /* Style sur les labels */
+	font-size:15px;
+}
+
+#intro { /* Style appliqué à l'id intro pour center les éléments */
+	display: flex; 
+    justify-content: center;
+    align-items: center;
+	background-color:white;
+}
+
+#présentation { /* Style appliqué à l'id présentation */
+	padding: 70px;
+}
+
+#présentation, h1, p { /* Style appliqué aux balises h1 et p dans l'id présnetation */
+	font-size: 20px;
+}
+
+#présentation, img { /* Style appliqué aux images dans l'id présentation */
+	width: 100%;
+}

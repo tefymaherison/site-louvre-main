@@ -1,0 +1,175 @@
+<!-- ANDRIANIRAISANTSOA, BIBAL et RACERLYN -->
+<!-- Début du document HTML -->
+<!DOCTYPE html>
+<html>
+<!-- Début de l'en-tête de la page, application de la partie graphique (CSS/caractères spéciaux) et définition du titre de la page -->
+<head>
+	<meta charset = "utf-8" />
+	<title> Réservation </title>
+	<link href="musee_style_1.css" rel="stylesheet">
+</head>
+<!-- Fin de l'en-tête de la page -->
+<!-- Début du corps de la page -->
+<body>
+	<!-- Création du menu du site, visible sur les trois principales pages du site (Accueil, Présentation et Réservation) -->
+	<nav>
+		<ul> 
+			<li id="logo"> <img src="Photos/logo musee.svg"/> </li>
+			<li class="menu-muse2"> <a href="Accueil.html "> RETOUR À L'ACCUEIL </a>  </li>
+			<li class="menu-muse1"> <a href="Présentation.html "> PRÉSENTATION </a>  </li>
+		</ul>
+	</nav>
+	<!-- Début du contenu de la page centré -->
+	<center>
+	<!-- Début de l'encadré contenant le formulaire -->
+	<fieldset>
+		<!-- Création d'un message indiquant l'obligation de fournir certaines informations -->
+		<p>Tous les champs avec un (*) doivent être obligatoirement complétés.</p>
+		<!-- Début du formulaire, indication de son nom, de la méthode d'envoie et du fichier de récéption des données -->
+		<form name="Billeterie" method="POST" action="test.php">
+			<h1>VOTRE RÉSERVATION :<h1>
+			<table>
+				<!-- Création de la première partie du formulaire de réservation concernant les informations personnelles du client -->
+				<tr><td colspan="2">Informations sur le client :</td></tr>
+				<!-- Création du champ dans lequel le client rentrera son nom -->
+				<tr>
+					<td> <label for="Nom">Nom *</label> </td>
+					<td> <input type="text" name="Nom" required>  </td>
+				</tr>
+				<!-- Création du champ dans lequel le client rentrera son prénom -->
+				<tr>
+					<td> <label for="Prénom">Prénom *</label></td>
+					<td> <input type="text" name="Prénom" required>  </td>
+				</tr>
+				<!-- Création du champ dans lequel le client rentrera son jour de naissance -->
+				<tr>
+					<td> <label for="JDN">Jour de naissance *</label></td>
+					<td> <input type="number" name="JDN" min="1" max="31" required>  </td>
+				</tr>
+				<!-- Création du champ dans lequel le client rentrera son mois de naissance -->
+				<tr>
+					<td> <label for="MDN">Mois de naissance *</label></td>
+					<td> <input type="number" name="MDN" min="1" max="12" required>  </td>
+				</tr>
+				<!-- Création du champ dans lequel le client rentrera son année de naissance -->
+				<tr>
+					<td> <label for="ADN">Année de naissance *</label></td>
+					<td> <input type="number" name="ADN" min="1900" max="2022" required>  </td>
+				</tr>
+				<!-- Création du champ dans lequel le client rentrera son e-mail -->
+				<tr>
+					<td> <label for="Mail">Adresse E-Mail *</label></td>
+					<td> <input type="email" name="Mail" required>  </td>
+				</tr>
+				<!-- Création du champ dans lequel le client rentrera, s'il souhaite, son téléphone -->
+				<tr>
+					<td> <label for="Téléphone">Téléphone</label></td>
+					<td> <input type="text" name="Téléphone">  </td>
+				</tr>
+				<!-- Création du champ dans lequel le client rentrera son adresse (numéro et nom de rue) -->
+				<tr>
+					<td> <label for="Adresse">Adresse *</label></td>
+					<td> <input type="text" name="Adresse" required>  </td>
+				</tr>
+				<!-- Création du champ dans lequel le client rentrera son code postal (s'il habite en France notamment) -->
+				<tr>
+					<td> <label for="CP">Code Postal</label></td>
+					<td> <input type="text" name="CP">  </td>
+				</tr>
+				<!-- Création du champ dans lequel le client rentrera sa ville -->
+				<tr>
+					<td> <label for="Ville">Ville *</label></td>
+					<td> <input type="text" name="Ville" required>  </td>
+				</tr>
+				<!-- Création du champ dans lequel le client séléctionnera, dans la liste déroulante, son pays (s'il habite dans l'UE), ou l'option "Pays extérieurs à l'UE" (s'il n'y habite pas) -->
+				<tr>
+					<td> <label for="Pays">Pays *</label>  </td>
+					<td> <select name="Pays"> 
+						<option value="DE">Allemagne</option>
+						<option value="AT">Autriche</option>
+						<option value="BE">Belgique</option>
+						<option value="BG">Bulgarie</option>
+						<option value="CY">Chypre</option>
+						<option value="HR">Croatie</option>
+						<option value="DK">Danemark</option>
+						<option value="ES">Espagne</option>
+						<option value="EE">Estonie</option>
+						<option value="FI">Finlande</option>
+						<option value="FR" selected>France</option>
+						<option value="GR">Grèce</option>
+						<option value="HU">Hongrie</option>
+						<option value="IE">Irlande</option>
+						<option value="IT">Italie</option>
+						<option value="LV">Lettonie</option>
+						<option value="LT">Littuanie</option>
+						<option value="LU">Luxembourg</option>
+						<option value="MT">Malte</option>
+						<option value="NL">Pays-Bas</option>
+						<option value="PL">Pologne</option>
+						<option value="PT">Portugal</option>
+						<option value="RO">Roumanie</option>
+						<option value="SK">Slovaquie</option>
+						<option value="SI">Slovénie</option>
+						<option value="SE">Suède</option>
+						<option value="CZ">Tchéquie</option>
+						<option value="NOTUE">Pays extérieurs à l'UE</option>
+						</select> </td>
+				</tr>
+				<!-- Création de la seconde partie du formulaire de réservation concernant les informations sur la réservation pour la visite du client -->
+				<tr><td colspan="2">Informations sur la visite :</td></tr>
+				<!-- Création du champ dans lequel le client séléctionnera, dans la liste déroulante, le type de billet souhaité, selon son profil -->
+				<tr>
+					<td> <label for="Billet">Type de billet *</label>  </td>
+					<td> <select name="Billet"> 
+						<option selected value="PTM">Plein Tarif Musée (17€)</option>
+						<option value="G1">Jeunes de moins de 18 ans (Gratuit)</option>
+						<option value="G2">Visiteurs de 18-25 ans résidents dans l'UE (Gratuit)</option>
+						<option value="G3">Visiteurs porteurs de cartes professionnelles (Gratuit)</option>
+						<option value="G4">Visiteurs porteurs de cartes Louvre (Gratuit)</option>			
+						<option value="G5">Autres visiteurs exonérés (Gratuit)</option>
+						</select> </td>
+				</tr>
+				<!-- Création du champ dans lequel le client séléctionnera, dans la liste déroulante, son jour de visite (les réservations peuvent se faire pour des visites ayant lieu le jour même ou dans les 7 jours qui suivent) -->
+				<tr>
+					<td> <label for="JourVisite">La visite aura lieu *</label></td>
+					<td> <select name="JourVisite"> 
+						<option selected value="0">Aujourd'hui</option>
+						<option value="1">Demain</option>
+						<option value="2">Dans deux jours</option>
+						<option value="3">Dans trois jours</option>
+						<option value="4">Dans quatre jours</option>			
+						<option value="5">Dans cinq jours</option>
+						<option value="6">Dans six jours</option>
+						<option value="7">Dans une semaine</option>
+						</select> </td>
+				</tr>
+				<!-- Création du champ dans lequel le client cliquera sur le bouton "Réserver" pour valider sa réservation ou sur le bouton "Annuler" pour réinitialiser le formulaire -->
+				<tr>	
+					<td colspan="2"><input type="submit" id="submit" value="Réserver" > <input type="reset" id="reset" value="Annuler" ></td>
+				</tr>
+			</table>
+		</form>
+		<!-- Fin du formulaire -->
+	</fieldset>
+	<!-- Fin de l'encadré contenant le formulaire -->
+	</center>
+	<!-- Fin du contenu de la page centré -->
+	<br>
+	<br>
+	<br>	
+	<!-- Création du pied de page du site, quelques-uns des réseaux sociaux liés au Musée du Louvre et donc à l'exposition -->
+	<div>
+	<table>
+		<tr>
+			<td> <img  id="logo1" src="Photos/logo musee.svg"/> </td>
+			<td  id="Titre">MUSÉES DE PARIS (EXPOSITION PERMANENTE)</td>
+			<td> <a href="https://fr-fr.facebook.com/museedulouvre/" target="_blank"> <img src="Photos/f1.png"/> </a> </td>	
+			<td> <a href="https://www.instagram.com/museelouvre/" target="_blank"> <img src="Photos/i1.png "/> </a>   </td>	
+			<td> <a href="https://twitter.com/MuseeLouvre" target="_blank"> <img src="Photos/t1.png "/> </a> </td>
+		</tr>
+	</table>
+	</div>
+</body>
+<!-- Fin du corps de la page -->
+</html>
+<!-- Fin du document HTML -->
